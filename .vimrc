@@ -5,6 +5,11 @@
 " some plugins not work without it
 set t_Co=256
 
+" Show a vertical line on a 80th character
+set textwidth=120
+set colorcolumn=+1
+highlight ColorColumn ctermbg=DarkGrey
+
 " Turn off filetype plugins before bundles init
 filetype off
 " Auto installing NeoNeoBundle
@@ -288,6 +293,10 @@ let NERDTreeMinimalUI=1
 
 " Display current file in the NERDTree ont the left
 nmap <silent> <leader>f :NERDTreeFind<CR>
+
+" Toggle by Ctrl+D
+nmap <silent> <C-D> :NERDTreeToggle<CR>
+
 
 "-------------------------
 " Syntastic
